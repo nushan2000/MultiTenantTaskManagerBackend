@@ -19,10 +19,11 @@ public class JwtUtil {
     );
 
     // Generate token with username and tenantId
-    public String generateToken(String username, Long tenantId) {
+    public String generateToken(String username, Long tenantId,String role) {
         long now = System.currentTimeMillis();
         return Jwts.builder()
                 .claim("tenantId", tenantId)
+                .claim("role",role)
                 .setSubject(username)
                 .setIssuedAt(new Date(now))
                 .setExpiration(new Date(now + 1000 * 60 * 60 * 24)) // 24 hours
