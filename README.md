@@ -12,6 +12,45 @@ This repository contains the backend for the Multi-Tenant Task Manager applicati
   - REST controllers for tenants, users, tasks
   - Repositories and service layers to encapsulate business logic
 
+## 🚀 Features
+
+### 🔐 Authentication & Authorization
+- JWT-based authentication
+- Role-based access control (Admin/User)
+- Tenant ID embedded in JWT tokens
+- Secure password hashing
+
+### 🏢 Multi-Tenancy
+- Complete data isolation using tenant context
+- Tenant-specific branding and themes
+- Shared application instance with separate data
+- Automatic tenant ID extraction from JWT
+
+### 👥 User Management
+- **Admin users:** Manage tenant users and settings
+- **Regular users:** Manage personal tasks
+- Tenant-bound user registration
+
+### 📋 Task Management
+- Create, read, update, delete tasks
+- Task assignment to users
+- Tenant-specific task lists
+- Task status tracking
+
+### 🎨 Tenant-Specific UI
+- Dynamic theme switching based on tenant
+- Custom branding per organization
+- Responsive React interface
+
+### 🔧 Technical Features
+- RESTful APIs
+- Database migration support
+- Comprehensive logging with tenant context
+- Error handling and validation
+
+---
+
+
 ## Important files & packages
 
 - `com.example.MultiTenantTaskManagerBackend` — main application class (`MultiTenantTaskManagerBackendApplication.java`)
